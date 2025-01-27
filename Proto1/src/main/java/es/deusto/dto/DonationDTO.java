@@ -2,32 +2,23 @@ package es.deusto.dto;
 
 import java.util.Objects;
 
-/* TODO:
- * 1. Do this part.
- * 2. DO THIS PART.
- * 3. READ. CAREFULLY.
- * 4. Finish class diagram.
- * 5. Finish each prototype.
- * 
- */
-
-public class CampaignDTO {
+public class DonationDTO {
 
 	private Long id;
 	private String name;
 	private String description;
 	// Default constructor is needed for Jackson to deserialize JSON
-	public CampaignDTO() { }
+	public DonationDTO() { }
 	
 	// Constructor without id for creating new Campaignes using POST
-	public CampaignDTO(String name, String description) {
+	public DonationDTO(String name, String description) {
 		super();
 		this.name = name;
 		this.description = description;
 	}
 
 	// Constructor with all attributes
-	public CampaignDTO(Long id, String name, String description) {
+	public DonationDTO(Long id, String name, String description) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -70,7 +61,7 @@ public class CampaignDTO {
 		if (getClass() != obj.getClass()) {
 			return false;
 		}
-		CampaignDTO other = (CampaignDTO) obj;
+		DonationDTO other = (DonationDTO) obj;
 		return Objects.equals(id, other.getId());
 	}
 	
